@@ -18,7 +18,7 @@ interface Props {
 const UsersPage = async ({searchParams: {sortOrder}}: Props) => {
     const res = await fetch(
         'http://localhost:3000/api/users',
-        {next: {revalidate: 20}}
+        {cache: 'no-cache',}
     );
 
     const users: User[] = await res.json();
@@ -31,13 +31,13 @@ const UsersPage = async ({searchParams: {sortOrder}}: Props) => {
 
     const sortedUsers = sort(users).asc(
         sortOrder === 'email' ? user => user.email :
-            user => user.name
+            user => user.id
     );
 
     return (<>
-        <h1 className="font-extrabold py-2 text-3xl">Users</h1>
+        <h1 className="font-extrabold py-2 text-3xl ">Users</h1>
         <div>
-            <Link href="/users/new" className="btn btn-primary rounded-md shadow-lg">Create</Link>
+            <Link href="/users/new" className="btn btn-primary rounded-md shadow-lg my-2 text-white">Create</Link>
         </div>
         <div className="overflow-x-auto card shadow-lg flex justify-center">
             <table className="table table-zebra">
