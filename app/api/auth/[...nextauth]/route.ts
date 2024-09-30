@@ -14,6 +14,7 @@ export const authOptions: NextAuthOptions = {
                 email: {label: 'Email', type: 'email', placeholder: 'email'},
                 password: {label: 'Password', type: 'password', placeholder: 'password'}
             },
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             async authorize(credentials, req) {
                 if (!credentials?.email || !credentials?.password) return null;
 
