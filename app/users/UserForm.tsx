@@ -34,7 +34,7 @@ export default function UserForm() {
                 console.log(res);
             });
 
-        router.push('/');
+        router.push('/users');
     }
 
     return <>
