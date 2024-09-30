@@ -36,9 +36,6 @@ const UsersPage = async ({searchParams: {sortOrder}}: Props) => {
 
     return (<>
         <h1 className="font-extrabold py-2 text-3xl ">Users</h1>
-        <div>
-            <Link href="/users/new" className="btn btn-primary rounded-md shadow-lg my-2 text-white">Create</Link>
-        </div>
         <div className="overflow-x-auto card shadow-lg flex justify-center">
             <table className="table table-zebra">
                 <thead className="">

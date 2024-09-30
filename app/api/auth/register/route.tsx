@@ -1,12 +1,8 @@
-import {z} from 'zod';
+import schema from "@/app/api/auth/register/schema";
 import {NextRequest, NextResponse} from "next/server";
 import {prisma} from "@/prisma/client";
 import bcrypt from "bcrypt";
 
-const schema = z.object({
-    email: z.string().email(),
-    password: z.string().min(5)
-})
 
 export async function POST(request: NextRequest) {
     const body = await request.json();
