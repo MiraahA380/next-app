@@ -16,6 +16,12 @@ npm run build
    Read more at Prisma to setup other database engines
 ```
 
+## Create a user in users table
+```
+   Manually create a user in users table, otherwise 
+   an error may pop up.
+```
+
 ## Configure .env file
 ```
    Rename .env.example to .env and configure it accordingly.
