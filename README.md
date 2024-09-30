@@ -9,9 +9,18 @@ npm install
 
 npm run build
 ```
-
-## Run Migrations
-
+## Setup Database Engine
 ```
-npx prisma migrate dev
+   Install your favorite database engine. by default, the 
+   .env.example has a sample connection string for MySQL.
+   Read more at Prisma to setup other database engines
+```
+
+## Configure .env file
+```
+   Rename .env.example to .env and configure it accordingly.
+```
+## Run Migrations
+```
+   npx prisma migrate dev
 ```
